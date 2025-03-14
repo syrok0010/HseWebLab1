@@ -1,0 +1,219 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #2c3e50, #4ca1af);
+  color: #ecf0f1;
+  background-attachment: fixed;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  gap: auto;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2em;
+  color: #2c3e50;
+}
+
+.main-info {
+  padding: 1rem;
+  margin: 1rem auto;
+
+  max-width: 1368px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.main-info > * {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 2rem;
+  color: #2c3e50;
+}
+
+.bio-image-section {
+  order: 1;
+  flex: 0 0 30%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.image-header p {
+  margin: 0.5rem 0;
+  font-size: 1.2em;
+  color: #2c3e50;
+}
+
+.bio-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-top: 1rem;
+}
+
+.bio-text-section {
+  order: 2;
+  flex: 1;
+}
+
+.bio-text-section h2,
+.bio-text-section h3 {
+  color: #2980b9;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.bio-text-section h3 {
+  margin-top: 1.5rem;
+}
+
+.facts-list {
+  line-height: 1.6;
+}
+
+.wikipedia-link {
+  color: #2980b9;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.wikipedia-link:hover {
+  color: #1d6ca1;
+  text-decoration: underline;
+}
+
+.discography-section {
+  padding: 1rem;
+  max-width: 1368px;
+  margin: 1rem auto;
+  width: 100%;
+}
+
+.discography-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ddd;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+}
+
+.discography-header h2 {
+  margin: 0;
+  color: #fff;
+}
+
+.toggle-discography-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.3s ease;
+  outline: none;
+}
+
+.toggle-discography-button:hover {
+  transform: scale(1.1);
+}
+
+.albums-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 1rem 0;
+}
+
+.album {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.album-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.album-image:hover {
+  transform: scale(1.05);
+}
+
+.album-title {
+  color: #ecf0f1;
+  margin: 0;
+}
+
+.page-footer {
+  text-align: center;
+  padding: 0.25rem 0;
+  background-color: rgba(44, 62, 80, 0.8);
+  color: #fff;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .main-info {
+    padding: 0.5rem;
+    flex-direction: column;
+  }
+
+  .bio-text-section {
+    padding: 1.5rem;
+    order: 2;
+  }
+
+  .bio-image-section {
+    max-width: 100%;
+    flex: 0 0 auto;
+    order: 1;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  .image-header p {
+    font-size: 1em;
+    color: #2c3e50;
+  }
+  .bio-image {
+    margin-top: 1rem;
+  }
+
+  .discography-section {
+    width: 100dvw;
+  }
+
+  .albums-container {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bio-text-section h2 {
+    font-size: 2em;
+  }
+}
